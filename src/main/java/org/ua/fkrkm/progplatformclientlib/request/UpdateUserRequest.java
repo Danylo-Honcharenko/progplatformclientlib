@@ -18,6 +18,4 @@ public class UpdateUserRequest {
     private String lastName;
     // Email
     private String email;
-    // Пароль
-    private String password;
 }
