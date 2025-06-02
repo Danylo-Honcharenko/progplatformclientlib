@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.ua.fkrkm.proglatformdao.entityMongo.Question;
 import org.ua.fkrkm.proglatformdao.entityMongo.view.AnswerView;
 
+import java.util.Date;
 import java.util.List;
 
 @Schema(description = "Відповідь при перевірки тесту")
@@ -20,4 +21,5 @@ public class CheckTestAnswersResultResponse {
     private Integer currentAssessment;
     private List<AnswerView> correctAnswers;
     private List<Question> wrongAnswers;
+    private Date created;
 }
