@@ -23,4 +23,6 @@ public class LoginUserResponse {
     private String role;
     // Час створення
     private Date created;
+    // Час коли токен протухне
+    private String tokenExpirationDate;
 }
