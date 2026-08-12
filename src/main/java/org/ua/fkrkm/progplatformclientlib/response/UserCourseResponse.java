@@ -15,5 +15,5 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserCourseResponse {
-    List<Course> courses;
+    List<CourseResponse> courses;
 }
