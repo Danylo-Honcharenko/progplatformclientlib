@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateTopicResponse {
-    private int id;
+    private Long id;
     // Назва теми
     private String name;
     // Опис

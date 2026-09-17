@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SetModuleTopicCompletedRequest {
-    private int moduleId;
-    private int topicId;
-    private int userId;
+    private Long moduleId;
+    private Long topicId;
+    private Long userId;
 }

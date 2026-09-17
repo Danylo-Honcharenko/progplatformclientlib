@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateTopicRequest {
-    private int id;
+    private Long id;
     // Назва теми
     private String name;
     // Опис
     private String description;
     // ID курсу
-    private Integer courseId;
+    private Long courseId;
 }

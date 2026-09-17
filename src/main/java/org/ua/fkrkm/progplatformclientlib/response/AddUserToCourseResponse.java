@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AddUserToCourseResponse {
-    private int courseId;
-    private int userId;
+    private Long courseId;
+    private Long userId;
 }

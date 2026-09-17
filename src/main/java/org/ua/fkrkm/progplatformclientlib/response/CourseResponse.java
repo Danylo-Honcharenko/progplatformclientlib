@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CourseResponse {
-    private int id;
+    private Long id;
     // Назва курсу
     private String name;
     // Опис курсу

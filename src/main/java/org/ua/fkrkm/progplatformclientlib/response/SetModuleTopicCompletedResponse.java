@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SetModuleTopicCompletedResponse {
-    private int id;
-    private int moduleId;
-    private int topicId;
-    private int userId;
+    private Long id;
+    private Long moduleId;
+    private Long topicId;
+    private Long userId;
 }

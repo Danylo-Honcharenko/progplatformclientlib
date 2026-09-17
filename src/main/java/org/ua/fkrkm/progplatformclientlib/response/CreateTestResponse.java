@@ -17,7 +17,7 @@ import java.util.List;
 public class CreateTestResponse {
     private String uuid;
     private String name;
-    private Integer topicId;
+    private Long topicId;
     private List<QuestionView> questions;
     private String created;
 }

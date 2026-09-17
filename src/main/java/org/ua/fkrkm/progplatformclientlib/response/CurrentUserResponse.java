@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CurrentUserResponse {
-    private int id;
+    private Long id;
     // Імя
     private String firstName;
     // Фамілія

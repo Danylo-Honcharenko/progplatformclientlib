@@ -20,5 +20,5 @@ public class CreateExerciseRequest {
     @NotBlank(message = "Не вказано опис!")
     private String description;
     // ID топіку
-    private Integer topicId;
+    private Long topicId;
 }

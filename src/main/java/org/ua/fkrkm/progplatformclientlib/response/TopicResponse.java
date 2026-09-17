@@ -19,7 +19,7 @@ public class TopicResponse {
     // Опис теми
     private String description;
     // ID курсу
-    private Integer courseId;
+    private Long courseId;
     // Час створення
     private Date created;
     // Час оновлення

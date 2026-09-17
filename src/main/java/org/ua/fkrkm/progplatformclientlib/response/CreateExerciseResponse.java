@@ -14,13 +14,13 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateExerciseResponse {
-    private int id;
+    private Long id;
     // Назва завдання
     private String name;
     // Опис завдання
     private String description;
     // ID топіку
-    private Integer topicId;
+    private Long topicId;
     // Час створення
     private Date created;
 }

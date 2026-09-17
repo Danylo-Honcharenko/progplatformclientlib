@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CourseUsersResponse {
     // ID курсу
-    private int courseId;
+    private Long courseId;
     // Назва курсу
     private String courseName;
     // Користувачі курсу

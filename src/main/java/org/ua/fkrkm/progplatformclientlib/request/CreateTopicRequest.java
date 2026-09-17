@@ -19,5 +19,5 @@ public class CreateTopicRequest {
     @NotBlank(message = "Опис теми не може бути порожнім!")
     private String description;
     @Min(value = 1, message = "Мінімальний ID модуля 1!")
-    private int moduleId;
+    private Long moduleId;
 }

@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DeleteUserFromCourseResponse {
-    private int userId;
+    private Long userId;
 }

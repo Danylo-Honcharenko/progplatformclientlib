@@ -20,6 +20,6 @@ public class CreateTestRequest {
     @NotBlank(message = "Назва курсу є обов'язковою!")
     private String name;
     @NotNull(message = "Потрібно вказати тему до якої відноситься тест!")
-    private Integer topicId;
+    private Long topicId;
     private List<Question> questions;
 }

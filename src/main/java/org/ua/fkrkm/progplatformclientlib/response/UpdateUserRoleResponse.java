@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateUserRoleResponse {
-    private int userId;
+    private Long userId;
     private String userEmail;
     private String newRoleName;
     private String oldRoleName;

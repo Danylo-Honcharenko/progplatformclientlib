@@ -16,6 +16,6 @@ import java.util.List;
 @AllArgsConstructor
 public class CheckTestAnswersRequest {
     private String uuid;
-    private Integer userId;
+    private Long userId;
     private List<AnswerView> answers;
 }

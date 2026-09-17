@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LoginUserResponse {
-    private Integer id;
+    private Long id;
     // Імя
     private String firstName;
     // Фамілія

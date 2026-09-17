@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UpdateUserRoleRequest {
     @Min(value = 1, message = "Мінімальний ID користувача 1!")
-    private int userId;
+    private Long userId;
     @NotBlank(message = "RoleName не має бути порожнім!")
     private String roleName;
 }

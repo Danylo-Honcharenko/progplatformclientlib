@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateCourseResponse {
-    private Integer id;
+    private Long id;
     // Назва курсу
     private String name;
     // Опис курсу

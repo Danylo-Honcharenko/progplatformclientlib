@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateCourseRequest {
-    private int id;
+    private Long id;
     // Назва курсу
     private String name;
     // Опис курсу
