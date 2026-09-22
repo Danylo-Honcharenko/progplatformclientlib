@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.ua.fkrkm.proglatformdao.entity.Topic;
+import org.ua.fkrkm.proglatformdao.entity.view.TopicView;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetAllCourseModules {
-    List<Topic> topics;
+public class GetAllModuleTopics {
+    List<TopicView> topics;
+    List<Integer> pages;
 }
