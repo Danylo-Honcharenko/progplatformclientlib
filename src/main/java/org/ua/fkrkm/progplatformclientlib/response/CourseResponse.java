@@ -25,6 +25,4 @@ public class CourseResponse {
     private Date created;
     // Час оновлення
     private Date updated;
-    // Модулі
-    private List<ModuleView> modules;
 }

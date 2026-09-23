@@ -5,16 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.ua.fkrkm.proglatformdao.entity.Topic;
-import org.ua.fkrkm.proglatformdao.entity.view.TopicView;
+import org.ua.fkrkm.proglatformdao.entity.view.ModuleView;
 
 import java.util.List;
 
-@Schema(description = "Відповідь для отримання всіх тем модуля")
+@Schema(description = "Відповідь при отриманні модулів")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetAllModuleTopics {
-    List<TopicView> topics;
+public class ModulesResponse {
+    private List<ModuleView> modules;
 }
