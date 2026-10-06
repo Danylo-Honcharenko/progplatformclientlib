@@ -1,20 +1,19 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.http.HttpStatus;
 import org.ua.fkrkm.proglatformdao.entity.view.CourseView;
+import org.ua.fkrkm.progplatformclientlib.data.CourseData;
 
 import java.util.List;
 
 @Schema(description = "Відповідь для отримання всіх курсів")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class GetAllCoursesResponse {
-    // Курси
-    List<CourseResponse> courses;
+@EqualsAndHashCode(callSuper = true)
+public class GetAllCoursesResponse extends Response<List<CourseData>> {
+
+    public GetAllCoursesResponse(List<CourseData> data) {
+        super(HttpStatus.OK, data);
+    }
 }

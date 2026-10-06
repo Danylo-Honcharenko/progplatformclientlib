@@ -1,28 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.Date;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.LoginUserData;
 
 @Schema(description = "Відповідь при успішному вході в систему користувачем")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class LoginUserResponse {
-    private Long id;
-    // Імя
-    private String firstName;
-    // Фамілія
-    private String lastName;
-    // Роль
-    private String role;
-    // Час створення
-    private Date created;
-    // Час коли токен протухне
-    private Date tokenExpirationDate;
+@EqualsAndHashCode(callSuper = true)
+public class LoginUserResponse extends Response<LoginUserData> {
+    public LoginUserResponse(LoginUserData data) {
+        super(HttpStatus.OK, data);
+    }
 }

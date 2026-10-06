@@ -1,28 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.Date;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.CreateUserData;
 
 @Schema(description = "Відповідь при створенні користувача")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class CreateUserResponse {
-    private Long id;
-    // Імя
-    private String firstName;
-    // Фамілія
-    private String lastName;
-    // Email
-    private String email;
-    // Роль
-    private String role;
-    // Час створення
-    private Date created;
+@EqualsAndHashCode(callSuper = true)
+public class CreateUserResponse extends Response<CreateUserData> {
+    public CreateUserResponse(CreateUserData data) {
+        super(HttpStatus.CREATED, data);
+    }
 }

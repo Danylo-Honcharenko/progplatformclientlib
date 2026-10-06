@@ -1,18 +1,20 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.ErrorData;
 
 @Schema(description = "Відповідь помилки")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class ErrorResponse {
-    private String message;
-    private String details;
-    private String msid;
+@EqualsAndHashCode(callSuper = true)
+public class ErrorResponse extends Response<ErrorData> {
+    public ErrorResponse(ErrorData data) {
+        this(HttpStatus.INTERNAL_SERVER_ERROR, data);
+    }
+
+    public ErrorResponse(HttpStatus status, ErrorData data) {
+        super(status, data);
+    }
 }

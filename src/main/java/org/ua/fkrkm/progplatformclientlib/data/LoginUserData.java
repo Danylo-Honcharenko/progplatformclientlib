@@ -1,0 +1,26 @@
+package org.ua.fkrkm.progplatformclientlib.data;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class LoginUserData {
+    private Long id;
+    // Імя
+    private String firstName;
+    // Фамілія
+    private String lastName;
+    // Роль
+    private String role;
+    // Час створення
+    private Date created;
+    // Час коли токен протухне
+    private Date tokenExpirationDate;
+}

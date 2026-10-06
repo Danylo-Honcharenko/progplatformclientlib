@@ -1,24 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.Date;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.UpdateTopicData;
 
 @Schema(description = "Відповідь при оновленні теми")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class UpdateTopicResponse {
-    private Long id;
-    // Назва теми
-    private String name;
-    // Опис
-    private String description;
-    // Час оновлення
-    private Date updated;
+@EqualsAndHashCode(callSuper = true)
+public class UpdateTopicResponse extends Response<UpdateTopicData> {
+    public UpdateTopicResponse(UpdateTopicData data) {
+        super(HttpStatus.OK, data);
+    }
 }

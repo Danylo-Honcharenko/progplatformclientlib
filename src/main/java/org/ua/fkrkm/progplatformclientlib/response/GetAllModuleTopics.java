@@ -1,20 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.ua.fkrkm.proglatformdao.entity.Topic;
-import org.ua.fkrkm.proglatformdao.entity.view.TopicView;
-
-import java.util.List;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.GetAllModuleTopicsData;
 
 @Schema(description = "Відповідь для отримання всіх тем модуля")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class GetAllModuleTopics {
-    List<TopicView> topics;
+@EqualsAndHashCode(callSuper = true)
+public class GetAllModuleTopics extends Response<GetAllModuleTopicsData> {
+    public GetAllModuleTopics(GetAllModuleTopicsData data) {
+        super(HttpStatus.OK, data);
+    }
 }

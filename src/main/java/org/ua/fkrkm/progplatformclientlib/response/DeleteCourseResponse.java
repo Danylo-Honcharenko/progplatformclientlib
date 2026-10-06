@@ -1,16 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.DeleteCourseData;
 
 @Schema(description = "Відповідь при видалені курсу")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class DeleteCourseResponse {
-    private Long id;
+@EqualsAndHashCode(callSuper = true)
+public class DeleteCourseResponse extends Response<DeleteCourseData> {
+    public DeleteCourseResponse(DeleteCourseData data) {
+        super(HttpStatus.OK, data);
+    }
 }

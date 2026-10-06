@@ -1,25 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.ua.fkrkm.proglatformdao.entityMongo.Question;
-import org.ua.fkrkm.proglatformdao.entityMongo.view.AnswerView;
-
-import java.util.Date;
-import java.util.List;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.CheckTestAnswersResultData;
 
 @Schema(description = "Відповідь при перевірки тесту")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class CheckTestAnswersResultResponse {
-    private Integer maxAssessment;
-    private Integer currentAssessment;
-    private List<AnswerView> correctAnswers;
-    private List<Question> wrongAnswers;
-    private Date created;
+@EqualsAndHashCode(callSuper = true)
+public class CheckTestAnswersResultResponse extends Response<CheckTestAnswersResultData> {
+    public CheckTestAnswersResultResponse(CheckTestAnswersResultData data) {
+        super(HttpStatus.OK, data);
+    }
 }

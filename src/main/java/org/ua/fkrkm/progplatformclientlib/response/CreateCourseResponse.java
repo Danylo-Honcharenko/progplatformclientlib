@@ -1,24 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.Date;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.CreateCourseData;
 
 @Schema(description = "Відповідь створеного курсу")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class CreateCourseResponse {
-    private Long id;
-    // Назва курсу
-    private String name;
-    // Опис курсу
-    private String description;
-    // Час створення
-    private Date created;
+@EqualsAndHashCode(callSuper = true)
+public class CreateCourseResponse extends Response<CreateCourseData> {
+    public CreateCourseResponse(CreateCourseData data) {
+        super(HttpStatus.CREATED, data);
+    }
 }

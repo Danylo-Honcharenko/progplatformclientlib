@@ -1,19 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.UpdateUserRoleData;
 
 @Schema(description = "Відповідь при оновленні ролі користувача")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class UpdateUserRoleResponse {
-    private Long userId;
-    private String userEmail;
-    private String newRoleName;
-    private String oldRoleName;
+@EqualsAndHashCode(callSuper = true)
+public class UpdateUserRoleResponse extends Response<UpdateUserRoleData> {
+    public UpdateUserRoleResponse(UpdateUserRoleData data) {
+        super(HttpStatus.OK, data);
+    }
 }

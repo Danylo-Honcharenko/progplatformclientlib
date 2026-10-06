@@ -1,28 +1,17 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.ua.fkrkm.proglatformdao.entity.view.ModuleView;
-
-import java.util.Date;
-import java.util.List;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.CourseData;
 
 @Schema(description = "Відповідь при отриманні курсу")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class CourseResponse {
-    private Long id;
-    // Назва курсу
-    private String name;
-    // Опис курсу
-    private String description;
-    // Час створення
-    private Date created;
-    // Час оновлення
-    private Date updated;
+@EqualsAndHashCode(callSuper = true)
+public class CourseResponse extends Response<CourseData> {
+
+    public CourseResponse(CourseData data) {
+        super(HttpStatus.OK, data);
+    }
 }

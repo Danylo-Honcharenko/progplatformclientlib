@@ -1,19 +1,16 @@
 package org.ua.fkrkm.progplatformclientlib.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.Map;
+import lombok.EqualsAndHashCode;
+import org.springframework.http.HttpStatus;
+import org.ua.fkrkm.progplatformclientlib.data.FieldValidData;
 
 @Schema(description = "Відповідь помилки валідації вхідних параметрів")
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class FieldValidResponse {
-    private String message;
-    private Map<String, String> details;
+@EqualsAndHashCode(callSuper = true)
+public class FieldValidResponse extends Response<FieldValidData> {
+    public FieldValidResponse(FieldValidData data) {
+        super(HttpStatus.BAD_REQUEST, data);
+    }
 }
